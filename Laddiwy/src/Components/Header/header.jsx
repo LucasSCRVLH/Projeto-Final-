@@ -1,6 +1,7 @@
 
 import "./header.css"
 import logo from "../../img/logo.png"
+import rj from "../../img/rj.png"
 
 export function Header(){
 
@@ -13,7 +14,8 @@ export function Header(){
             <img src={logo} alt="logo" />
 
            </div>
-        
+           {/* <button><img src={rj} alt="rj" /></button>
+         */}
            
         
         <ul className="list-header">
@@ -24,12 +26,17 @@ export function Header(){
             
                 <li><a className="list-header" href="#">Login</a></li>
             
-            <li> 
-                <input  type="text" placeholder="Pesquise seu concurso" /> 
-                <img className="lupaLogo" src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="lupa" />
-            </li>
+        
+
+            </ul>
+                
+                <div className="search">
+                    <input  type="text" placeholder="Pesquise seu concurso" /> 
+                    <button><img className="lupaLogo" src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="lupa" /> </button>
+                </div>
            
-        </ul>
+           
+       
 
 
         </div>

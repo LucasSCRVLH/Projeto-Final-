@@ -11,48 +11,69 @@ font-weight: bold;
 color: #000000;
 display: flex;
 flex-direction: row;
-gap: 20px;
+gap: 40px;
 list-style: none;
+font-size: larger;
+align-items: center;
 
 }
 
 a{
     text-decoration: none;
 }
-
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 
 .container{
     /* width: ; */
     background-color: #64748b;
-    justify-content: center;
+    justify-content:space-around;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap:150px
+   
 
 }
+
 
 
 img{
-    width: 100%;
+    width: 250px;
     height: 100%;
-    gap: 20px;
+    
+    
 }
-input:not([type="checkbox"]){
+input{
     border: 1px solid #d4d4d4;
     border-radius: 3px;
     flex: 1;
     height: 1.8rem;
-    transition: 1s;
-    
+    outline: none;
 }
 
 input:focus{
-    border:1px solid #7e22ce;
+    border:2px solid #2dd4bf;
 }
 
 .lupaLogo{
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
+    
+}
+
+button{
+    background-color:#64748b ;
+    border: #64748b;
+}
+
+.lupaLogo:hover{
+    transform: scale(1.5);
+
 }
