@@ -10,7 +10,7 @@ export function Header(){
 
            <div className="imagem">
 
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo" />
 
            </div>
         
@@ -24,7 +24,10 @@ export function Header(){
             
                 <li><a className="list-header" href="#">Login</a></li>
             
-            <li> <input type="text" placeholder="Pesquise seu concurso" /></li>
+            <li> 
+                <input  type="text" placeholder="Pesquise seu concurso" /> 
+                <img className="lupaLogo" src="https://cdn-icons-png.flaticon.com/512/64/64673.png" alt="lupa" />
+            </li>
            
         </ul>
 
