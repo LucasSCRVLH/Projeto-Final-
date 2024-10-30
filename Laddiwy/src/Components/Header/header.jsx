@@ -1,7 +1,7 @@
 
-import "./header.css"
+import "./header.module.css"
 import logo from "../../img/logo.png"
-import rj from "../../img/rj.png"
+
 
 export function Header(){
 
