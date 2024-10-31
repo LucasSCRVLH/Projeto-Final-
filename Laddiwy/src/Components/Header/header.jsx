@@ -1,6 +1,8 @@
+
 import logo from "../../img/logo.png";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import styles from "./header.module.css";
+
 
 export function Header() {
   return (
@@ -36,3 +38,10 @@ export function Header() {
     </div>
   );
 }
+
+
+
+
+
+
+
