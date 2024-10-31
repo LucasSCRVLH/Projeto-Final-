@@ -1,0 +1,68 @@
+.container{
+    background-color: #cbd5e1;
+}
+
+
+
+.ofertas{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    height: 300px;
+}
+
+.concursos{
+
+   
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px;
+    gap: 10px;
+}
+.emAlta{
+        width: 400px;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   height: 200px;
+   border-radius: 10px;
+ 
+}
+.banner{
+
+    width: 200px;
+    height: 200px;
+    
+}
+.alta{
+   
+    display: flex;
+padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.descubra{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.found{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.bussola{
+
+    width: 200px;
+    height: 200px;
+    
+}
