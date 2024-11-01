@@ -1,10 +1,12 @@
-
+import { useState } from "react";
 import logo from "../../img/logo.png";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import styles from "./header.module.css";
-
+import { Modal } from "../Modal/Modal";
 
 export function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.imagem}>
@@ -21,7 +23,12 @@ export function Header() {
         </li>
 
         <li>
-          <a href="#">Login</a>
+          <button
+            className={styles.loginButton}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Login
+          </button>
         </li>
 
         <li>
@@ -35,13 +42,7 @@ export function Header() {
           </div>
         </li>
       </ul>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
-
-
-
-
-
-
-

@@ -1,3 +1,25 @@
+:root {
+  /* Cores principais */
+  --primary-dark: #0c2340;    /* Azul marinho escuro */
+  --primary: #183761;         /* Azul marinho médio */
+  --primary-light: #2c5282;   /* Azul marinho claro */
+  
+  /* Cores de destaque */
+  --gold: #c5a572;           /* Dourado suave */
+  --gold-light: #d4b483;     /* Dourado claro */
+  --gold-dark: #b69661;      /* Dourado escuro */
+  
+  /* Cores neutras */
+  --neutral-dark: #1a202c;    /* Quase preto */
+  --neutral: #4a5568;         /* Cinza médio */
+  --neutral-light: #edf2f7;   /* Cinza claro */
+  --white: #ffffff;
+
+  /* Cores de estado */
+  --success: #276749;         /* Verde escuro */
+  --error: #9b2c2c;          /* Vermelho escuro */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +28,12 @@
 }
 
 .container {
-    background-color: #64748b;
-    padding: 1rem 2rem;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    padding: 1.2rem 2.5rem;
+    box-shadow: 0 4px 12px rgba(12, 35, 64, 0.15);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .imagem {
@@ -35,17 +57,18 @@
 
 .listHeader a {
     text-decoration: none;
-    color: #000000;
+    color: var(--neutral-light);
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .listHeader a:hover {
-    border: 1px solid #dddd;
-    color: #ffffff;
-    transform: translateY(-2px);
+    border: none;
+    border-bottom: 2px solid var(--gold);
+    color: var(--gold-light);
 }
 
 .searchBar {
@@ -59,9 +82,8 @@
 .icon {
     position: absolute;
     left: 10px;
-    color: #64748b;
+    color: var(--primary-dark);
     z-index: 1;
-    transition: all 1s ease;
 }
 
 .input {
@@ -71,26 +93,43 @@
     font-size: 0.9rem;
     border-radius: 20px;
     border: 1px solid #d4d4d4;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
     outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid transparent;
+    box-shadow: 0 2px 6px rgba(12, 35, 64, 0.08);
 }
 
-<<<<<<< HEAD
-.searchBar:hover {
-=======
 .input:hover,
 .input:focus {
-    background: linear-gradient(90deg, rgba(255, 156, 255, 0.1), rgba(255, 255, 255, 0.95));
->>>>>>> 47bdaf729176fb3d75d03402efa1c68929e6f0b9
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), rgba(255, 255, 255, 0.95));
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    outline: none;
+    border-color: var(--gold);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.15);
 }
 
-.searchBar:hover .input {
-    border-color: #64748b;
+.loginButton {
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+    background: none;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
 }
 
-.searchBar:hover .icon {
-    color: #4a5568;
+.loginButton:hover {
+    background-color: var(--gold);
+    color: var(--primary-dark);
+    border-bottom: none;
+    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
