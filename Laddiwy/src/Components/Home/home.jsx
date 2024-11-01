@@ -1,6 +1,5 @@
 import styles from "./home.module.css";
-import { Card } from "../Card/card";
-
+import studying from "../../img/8602650.png";
 export function Home() {
   return (
     <>
@@ -15,6 +14,9 @@ export function Home() {
           <button className={styles.buttonCreate}>
             Garanta seu lugar no mercado
           </button>
+        </div>
+        <div className={styles.cardContainer}>
+          <img src={studying} alt="Estudante se preparando para concurso" />
         </div>
       </div>
     </>
