@@ -1,68 +1,80 @@
 .container{
-    background-color: #cbd5e1;
+    background-color: var(--neutral-light);
+    padding: 15rem 0;
+    background: linear-gradient(
+        to right,
+        var(--primary-dark),     
+        var(--primary),          
+        var(--primary-light)     
+    );
+    position: relative;
+    overflow: hidden;
+    max-height: 550px;
+}
+
+.divider{
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        var(--gold-dark),
+        var(--gold),
+        var(--gold-light),
+        var(--gold),
+        var(--gold-dark)
+    );
+    opacity: 0.8;
+    margin: 0;
+    box-shadow: 0 1px 4px rgba(197, 165, 114, 0.2);
 }
 
 
-
-.ofertas{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    height: 300px;
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(197, 165, 114, 0.1) 50%,  
+        transparent 70%
+    );
+    pointer-events: none;
 }
 
-.concursos{
+.title{
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-left: 100px;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
 
-   
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 10px;
-    gap: 10px;
-}
-.emAlta{
-        width: 400px;
-    background-color: beige;
-    display: flex;
-    align-items: center;
-   justify-content: center;
-   height: 200px;
-   border-radius: 10px;
- 
-}
-.banner{
-
-    width: 200px;
-    height: 200px;
-    
-}
-.alta{
-   
-    display: flex;
-padding: 30px;
-    align-items: center;
-    justify-content: center;
 }
 
-.descubra{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.found{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.bussola{
-
-    width: 200px;
-    height: 200px;
+.description{
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-left: 100px;
+    margin-top: 20px;
     
 }
+
+.buttonCreate{
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+    background: none;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+

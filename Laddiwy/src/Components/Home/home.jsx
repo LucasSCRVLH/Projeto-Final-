@@ -3,40 +3,20 @@ import { Card } from "../Card/card";
 
 export function Home() {
   return (
-    <div className={styles.container}>
-      <section className={styles.ofertas}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero in
-          autem voluptatum quam. Odio nostrum dignissimos et ea vel doloribus,
-          enim obcaecati saepe minus. Magnam suscipit vel cumque placeat.
-        </p>
-      </section>
-
-      <section className={styles.alta}>
-        <div className={styles.emAlta}>
-          <img className={styles.banner} src="" alt="" />
+    <>
+      <div className={styles.divider} />
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>Concursos Em todo o Brasil</h1>
+          <p className={styles.description}>
+            A gama de concursos que disponibilizamos para você é a mais completa
+            do mercado.
+          </p>
+          <button className={styles.buttonCreate}>
+            Garanta seu lugar no mercado
+          </button>
         </div>
-      </section>
-
-      <div className={styles.concursos}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
-
-      <section className={styles.descubra}>
-        <div className={styles.found}>
-          <img className={styles.bussola} src="" alt="" />
-
-          <h1>Descubra o concurso certo para você</h1>
-        </div>
-      </section>
-    </div>
+    </>
   );
 }
