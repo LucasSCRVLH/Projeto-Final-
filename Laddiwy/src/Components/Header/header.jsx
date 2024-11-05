@@ -9,6 +9,10 @@ export function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
 
+  const scrollToSection = () => {
+    document.getElementById("sobre-nos").scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.imagem}>
@@ -16,10 +20,12 @@ export function Header() {
       </div>
 
       <ul className={styles.listHeader}>
-        <li>
-          <a href="#">Home</a>
+      <li>
+          <button onClick={scrollToSection} className={styles.sobreNoisButton}>
+            Sobre nós
+          </button>
         </li>
-
+        
         <li>
           <a href="#">Favoritos</a>
         </li>
