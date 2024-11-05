@@ -4,6 +4,7 @@ import { MagnifyingGlass, Sun, Moon } from "@phosphor-icons/react";
 import styles from "./header.module.css";
 import { Modal } from "../Modal/Modal";
 import { useTheme } from "../../contexts/ThemeContext";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,18 +17,20 @@ export function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.imagem}>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
 
       <ul className={styles.listHeader}>
-      <li>
+        <li>
           <button onClick={scrollToSection} className={styles.sobreNoisButton}>
             Sobre nós
           </button>
         </li>
-        
+
         <li>
-          <a href="#">Favoritos</a>
+          <Link to="/favoritos">Favoritos</Link>
         </li>
 
         <li>
@@ -60,6 +63,7 @@ export function Header() {
           </div>
         </li>
       </ul>
+
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );

@@ -9,10 +9,10 @@ export function Card(){
 
         <div className={styles.card}>  
         
+           
+            <p>Seu concurso aqui</p>
         
-            <p>Lorem ipsum dolor sit amet consectetur, adipis</p>
-        
-        
+          
         
         
         

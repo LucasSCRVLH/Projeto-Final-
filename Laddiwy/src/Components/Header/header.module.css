@@ -176,3 +176,33 @@
   color: var(--primary-dark);
   transform: translateY(-1px);
 }
+
+.sobreNoisButton {
+    text-decoration: none;             
+    color: var(--neutral-light);     
+    font-size: 1.1rem;                 
+    padding: 0.5rem 1rem;             
+    transition: all 0.3s ease;         
+    font-weight: 600;                  
+    letter-spacing: 0.3px;            
+    border: none;                      
+    background: transparent;           
+    cursor: pointer;                  
+    position: relative;               
+}
+
+.sobreNoisButton:hover {
+    color: var(--gold-light);              
+}
+
+.sobreNoisButton:hover::after {
+    content: '';                        
+    display: block;                     
+    width: 100%;                        
+    height: 2px;                        
+    background: var(--gold);           
+    position: absolute;                 
+    bottom: -5px;                       
+    left: 0;                           
+    transition: all 0.3s ease;        
+}
