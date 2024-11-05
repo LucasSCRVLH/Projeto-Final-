@@ -1,10 +1,14 @@
-
+import { useState } from "react";
 import logo from "../../img/logo.png";
-import { MagnifyingGlass } from "@phosphor-icons/react";
+import { MagnifyingGlass, Sun, Moon } from "@phosphor-icons/react";
 import styles from "./header.module.css";
-
+import { Modal } from "../Modal/Modal";
+import { useTheme } from "../../contexts/ThemeContext";
 
 export function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
+
   return (
     <div className={styles.container}>
       <div className={styles.imagem}>
@@ -21,7 +25,22 @@ export function Header() {
         </li>
 
         <li>
-          <a href="#">Login</a>
+          <button onClick={toggleTheme} className={styles.themeToggle}>
+            {isDarkMode ? (
+              <Sun size={20} weight="bold" />
+            ) : (
+              <Moon size={20} weight="bold" />
+            )}
+          </button>
+        </li>
+
+        <li>
+          <button
+            className={styles.loginButton}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Login
+          </button>
         </li>
 
         <li>
@@ -35,13 +54,7 @@ export function Header() {
           </div>
         </li>
       </ul>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
-
-
-
-
-
-
-
