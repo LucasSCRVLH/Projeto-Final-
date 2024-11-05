@@ -45,6 +45,10 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .listHeader {
@@ -152,4 +156,23 @@
     .icon {
         left: 1rem;
     }
+}
+
+.themeToggle {
+    background: none;
+    border: none;  /* Removida a borda */
+    cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeToggle:hover {
+  background-color: var(--gold);
+  color: var(--primary-dark);
+  transform: translateY(-1px);
 }
